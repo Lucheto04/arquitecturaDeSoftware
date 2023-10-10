@@ -24,5 +24,8 @@ De las siguientes definiciones podemos sacar los siguientes conceptos claves.
 
 ***Decisiones de diseño :*** Son las decisiones que los arquitectos y desarrolladores toman durante el proceso de diseño para definir cómo se va a construir y estructurar el sistema de software, las decisiones de diseño son cruciales porque afectar directamente la calidad y el éxito del software.
 
-***Atributos de calidad :***  Estos permiten definir que es lo que mas allá de lo funcional que garantiza que el sistema funcione bien. Estos atributos son esenciales para evaluar y medir la calidad de un software y determinan su aceptabilidad en términos de rendimiento, fiabilidad, seguridad, usabilidad, mantenibilidad y otros aspectos importantes.
+***Atributos de calidad :*** Estos permiten definir que es lo que mas allá de lo funcional que garantiza que el sistema funcione bien. Estos atributos son esenciales para evaluar y medir la calidad de un software y determinan su aceptabilidad en términos de rendimiento, fiabilidad, seguridad, usabilidad, mantenibilidad y otros aspectos importantes.
 
+### ¿Que son los patrones de diseño?
+
+Básicamente un patrón es una solución a un problema en un contexto. Hay que tener muy claro que los patrones de diseño no son lo mismo que los patrones arquitectónicos
