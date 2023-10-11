@@ -4,15 +4,17 @@
 
 ### Temas
 
-[Que es la Arquitectura de Software](#¿que-es-la-arquitectura-de-software?)
-
-[Decisiones de Diseño](#decisiones-de-diseño)
+[Que es la Arquitectura de Software](#¿que-es-la-arquitectura-de-software)
 
 [Atributos de Calidad](#atributos-de-calidad)
 
+[Decisiones de Diseño](#decisiones-de-diseño)
+
 [Patrones de Arquitectura](#patrones-de-arquitectura)
 
-[Tipos de Arquitectura](#tipos-de-arquitectura)
+[Patrones de Diseño](#patrones-de-diseño)
+
+[Estilos Arquitectónicos](#estilos-arquitectónicos)
 
 
 
@@ -41,6 +43,27 @@ De las siguientes definiciones podemos sacar los siguientes conceptos claves.
 ***Decisiones de diseño :*** Son las decisiones que los arquitectos y desarrolladores toman durante el proceso de diseño para definir cómo se va a construir y estructurar el sistema de software, las decisiones de diseño son cruciales porque afectar directamente la calidad y el éxito del software.
 
 ***Atributos de calidad :*** Estos permiten definir que es lo que mas allá de lo funcional que garantiza que el sistema funcione bien. Estos atributos son esenciales para evaluar y medir la calidad de un software y determinan su aceptabilidad en términos de rendimiento, fiabilidad, seguridad, usabilidad, mantenibilidad y otros aspectos importantes.
+
+
+
+### Atributos de Calidad
+
+Los atributos de calidad son caracteristícas que definen la calidad de un sistema de software, son muy importantes para la arquitectura de software porque ayudan a garantizar que los sistemas de software sean funcionales, eficientes y confiables.
+
+Estos son algunos ejemplos de lo que se considerarian atributos de calidad:
+
+- **Funcionalidad:** La capacidad del sistema para satisfacer las necesidades de los usuarios.
+- **Usabilidad:** La facilidad con la que los usuarios pueden utilizar el sistema.
+- **Interoperabilidad:** La capacidad del sistema para interactuar con otros sistemas.
+- **Accesibilidad:** La capacidad del sistema para ser utilizado por personas con discapacidades.
+- **Rendimiento:** La velocidad, el tiempo de respuesta y la capacidad de procesamiento del sistema.
+- **Seguridad:** La capacidad del sistema para proteger los datos y la privacidad de los usuarios.
+- **Disponibilidad:** La capacidad del sistema para estar disponible para los usuarios.
+- **Mantenibilidad:** La facilidad con la que el sistema puede ser modificado o actualizado.
+- **Escalabilidad:** La capacidad del sistema para adaptarse a un aumento de la demanda.
+- **Portabilidad:** La capacidad del sistema para ser trasladado a diferentes entornos.
+
+Los arquitectos de software deben considerar tanto las decisiones de diseño como los atributos de calidad al diseñar y desarrollar sistemas de software. Las decisiones de diseño deben tomarse de manera que se cumplan los atributos de calidad deseados como por ejemplo una decisión de diseño puede ser elegir una arquitectura en capas para mejorar la escalabilidad del sistema. En este caso, la decisión de diseño se refiere a la elección de una arquitectura específica, mientras que el atributo de calidad es la escalabilidad.
 
 
 
@@ -101,137 +124,20 @@ Es importante documentar los requisitos funcionales y no funcionales de un siste
 
 
 
-### Atributos de Calidad
-
-Los atributos de calidad son propiedades medibles del sistema, son características muy importantes ya que son los que nos ayudan a saber, mas allá de la parte funcional, que otros atributos debe tener nuestra aplicación para asegurar que cumpla con los objetivos del negocio.
-
-*Para mas información ir a la rama de Atributos de Calidad*
-
-
-
 ### Patrones de Arquitectura
 
-Los patrones de arquitectura son soluciones o estructuras que ayudan a definir la aplicación desde el nivel más grande. Hay muchos patrones de arquitectura diferentes, cada uno con sus correspondientes ventajas y desventajas.
+Los patrones de arquitectura de software son soluciones o estructuras que ayudan a definir la aplicación desde el nivel más grande. Hay muchos patrones de arquitectura diferentes, cada uno con sus correspondientes ventajas y desventajas.
 
 *Para mas información ir a la rama de Patrones de Arquitectura*
 
 
 
-### Tipos de arquitectura
+### Patrones de Diseño
 
-Existen varios tipos de arquitectura de software, cada uno con sus características y enfoques específicos. A continuación, se describen algunos de los principales tipos de arquitectura de software.
+Los patrones de diseño en la arquitectura de software son soluciones generales y reutilizables a problemas comunes de diseño de software. Se basan en la experiencia de los arquitectos de software y proporcionan una forma de evitar errores comunes y crear sistemas de software más robustos y eficientes.
 
-1. ***Arquitectura de microservicios***
-
-   Esta arquitectura divide una aplicación en un conjunto de servicios pequeños, autónomos e independientes. Cada servicio es responsable de una función específica y se comunica con otros servicios a través de una API.
-
-   
-
-   * *Ventajas*
-
-     * Escalabilidad
-
-     * Flexibilidad
-
-     * Facilidad de Manteminiento
-   * *Desventajas*
-     * Mayor complejidad
-     * Mayor dificuldad de desarrollo
-
-   
-
-   En general, la arquitectura de microservicios es la mejor opción para proyectos que requieren escalabilidad, flexibilidad y facilidad de mantenimiento. Es una buena opción para aplicaciones complejas, aplicaciones que necesitan adaptarse rápidamente a los cambios o aplicaciones que necesitan ser implementadas en diferentes plataformas.
-
-   
-
-   Estos son unos proyectos de ejemplo en los cuales se podría implementar la arquitectura de microservicios:
-
-   * Plataformas de comercio electrónico
-
-   * Aplicaciones de redes sociales
-
-   * Aplicaciones empresariales
-
-     
-
-2. ***Arquitectura en capas***
-
-   Esta arquitectura divide una aplicación en capas lógicas, cada una de las cuales tiene un propósito específico. Las capas típicas son la capa de presentación, la capa de aplicación y la capa de datos. 
-
-   * *Ventajas*
-     * Facilidad de comprensión 
-     * Facilidad de mantenimiento
-
-   * *Desventajas*
-     * Menor escalabilidad
-     * Menor flexibilidad 
-
-   La arquitectura en capas es una buena opción para proyectos que son relativamente simples o que no requieren escalabilidad o flexibilidad. Es una buena opción para aplicaciones que necesiten ser implementadas rápidamente o aplicaciones que necesitan ser compatibles con sistemas heredados. 
-
-   
-
-   Estos son unos proyectos de ejemplo en los cuales se podría implementar la arquitectura en capas:
-
-   * Aplicaciones web
-
-   * Aplicaciones móviles
-
-   * Aplicaciones de escritorio
-
-     
-
-3. ***Arquitectura basada en eventos***
-
-   Esta arquitectura se basa en la comunicación entre componentes a través de eventos. Los eventos son notificaciones que se envían cuando ocurre un cambio en el sistema.
-
-   * *Ventajas*
-     * Reactividad
-     * Escalabilidad
-     * Descentralización
-
-   * *Desventajas*
-     * Mayor dificultad de depuración
-     * Mayor consumo de recursos
-
-   
-
-   La arquitectura basada en eventos es una buena opción para proyectos que requieren escalabilidad y flexibilidad pero que no necesitan ser compatibles con sistemas heredados. Es una buena opción para aplicaciones que necesitan procesar grandes cantidades de datos o aplicaciones que necesitan ser reactivas a los cambios.
-
-   
-
-   Estos son unos proyectos de ejemplo en los cuales se podría implementar la arquitectura basada en eventos:
-
-   * Aplicaciones de procesamiento de datos
-   * Aplicaciones de análisis
-   * Aplicaciones de juegos
-
-   
-
-4. ***Arquitectura basada en el espacio***
-
-   Esta arquitectura divide una aplicación en un conjunto de componentes que se ejecutan en diferente espacios de memoria. Los componentes pueden comunicarse entre si a través de un bus de mensajes.
-
-   * *Ventajas*
-     * Seguridad
-     * Disponibilidad
-     * Escalabilidad
-
-   * *Desventajas*
-     * Mayor dificultad de implementación
-     * Mayor riesgo de seguridad
-
-   
-
-   La arquitectura basada en el espacio es una buena opción para proyectos que requieren escalabilidad y seguridad. Es una buena opción para aplicaciones que necesitan ser accesibles desde diferentes ubicaciones o aplicaciones que necesitan proteger datos confidenciales
-
-   
-
-   Estos son unos proyectos de ejemplo en los cuales se podría implementar la arquitectura basada en el espacio:
-
-   * Aplicaciones de IoT
-   * Aplicaciones de cloud computing
-   * Aplicaciones de seguridad
+*Para mas información ir a la rama de Patrones de Diseño*
 
 
 
-### 
+### Estilos Arquitectónicos
