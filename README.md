@@ -12,7 +12,7 @@ Existen varios tipos de arquitectura de software, cada uno con sus característi
 
    Esta arquitectura divide una aplicación en un conjunto de servicios pequeños, autónomos e independientes. Cada servicio es responsable de una función específica y se comunica con otros servicios a través de una API.
 
-   
+  <img src="./img/microservicios-diagrama.png" style="zoom:45">
 
    * *Ventajas*
 
@@ -45,6 +45,8 @@ Existen varios tipos de arquitectura de software, cada uno con sus característi
 
    Esta arquitectura divide una aplicación en capas lógicas, cada una de las cuales tiene un propósito específico. Las capas típicas son la capa de presentación, la capa de aplicación y la capa de datos. 
 
+  <img src="./img/capas-diagrama.png" style="zoom:45">
+
    * *Ventajas*
      * Facilidad de comprensión 
      * Facilidad de mantenimiento
@@ -70,6 +72,8 @@ Existen varios tipos de arquitectura de software, cada uno con sus característi
 3. ***Arquitectura basada en eventos***
 
    Esta arquitectura se basa en la comunicación entre componentes a través de eventos. Los eventos son notificaciones que se envían cuando ocurre un cambio en el sistema.
+
+  <img src="./img/eventos-diagrama.png" style="zoom:45">
 
    * *Ventajas*
      * Reactividad
@@ -97,6 +101,8 @@ Existen varios tipos de arquitectura de software, cada uno con sus característi
 4. ***Arquitectura basada en el espacio***
 
    Esta arquitectura divide una aplicación en un conjunto de componentes que se ejecutan en diferente espacios de memoria. Los componentes pueden comunicarse entre si a través de un bus de mensajes.
+
+  <img src="./img/espacio-diagrama.png" style="zoom:45">
 
    * *Ventajas*
      * Seguridad
