@@ -19,10 +19,10 @@ SOLID no es un patrón de diseño ni un tipo de arquitectura de software. Se tra
 
 Los principios SOLID aportan los siguientes beneficios:
 
-Código más limpio y legible: SOLID ayuda a organizar el código de una forma más lógica y coherente, lo que lo hace más fácil de entender y mantener.
-Código más mantenible: SOLID hace que el código sea más fácil de modificar y actualizar, ya que las dependencias están bien definidas y las clases están bien estructuradas.
-Código más escalable: SOLID ayuda a crear código que sea más fácil de ampliar y adaptar a nuevos requisitos.
-¿Cómo aplicar SOLID?
+* ***Código más limpio y legible:*** SOLID ayuda a organizar el código de una forma más lógica y coherente, lo que lo hace más fácil de entender y mantener.
+* ***Código más mantenible:*** SOLID hace que el código sea más fácil de modificar y actualizar, ya que las dependencias están bien definidas y las clases están bien estructuradas.
+* ***Código más escalable:*** SOLID ayuda a crear código que sea más fácil de ampliar y adaptar a nuevos requisitos.
+  ¿Cómo aplicar SOLID?
 
 Aplicar los principios SOLID requiere un esfuerzo consciente por parte del desarrollador. No es algo que se pueda hacer de forma automática. Sin embargo, hay algunas cosas que se pueden hacer para empezar a aplicar SOLID en el código:
 
