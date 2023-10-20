@@ -26,10 +26,9 @@ Los principios SOLID aportan los siguientes beneficios:
 
 Aplicar los principios SOLID requiere un esfuerzo consciente por parte del desarrollador. No es algo que se pueda hacer de forma automática. Sin embargo, hay algunas cosas que se pueden hacer para empezar a aplicar SOLID en el código:
 
-Revisar el código existente: Una buena manera de empezar es revisar el código existente para identificar áreas donde se podrían aplicar los principios SOLID.
-Escribir nuevo código: Al escribir nuevo código, intentar aplicar los principios SOLID desde el principio.
-Aprender de otros: Hay muchos recursos disponibles para aprender sobre SOLID. Leer libros, artículos y blogs sobre el tema puede ayudar a entender mejor los principios y cómo aplicarlos.
-Ejemplos de SOLID en C#
+* ***Revisar el código existente:*** Una buena manera de empezar es revisar el código existente para identificar áreas donde se podrían aplicar los principios SOLID.
+* ***Escribir nuevo código:*** Al escribir nuevo código, intentar aplicar los principios SOLID desde el principio.
+* ***Aprender de otros:*** Hay muchos recursos disponibles para aprender sobre SOLID. Leer libros, artículos y blogs sobre el tema puede ayudar a entender mejor los principios y cómo aplicarlos.
 
 Aquí hay algunos ejemplos de cómo aplicar los principios SOLID en NodeJs y React:
 
