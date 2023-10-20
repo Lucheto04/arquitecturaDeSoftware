@@ -128,7 +128,6 @@ Es importante documentar los requisitos funcionales y no funcionales de un siste
 
 Los patrones de arquitectura de software son soluciones o estructuras que ayudan a definir la aplicación desde el nivel más grande. Hay muchos patrones de arquitectura diferentes, cada uno con sus correspondientes ventajas y desventajas.
 
-*Para mas información ir a la rama de Patrones de Arquitectura*
 
 
 
@@ -136,8 +135,4 @@ Los patrones de arquitectura de software son soluciones o estructuras que ayudan
 
 Los patrones de diseño en la arquitectura de software son soluciones generales y reutilizables a problemas comunes de diseño de software. Se basan en la experiencia de los arquitectos de software y proporcionan una forma de evitar errores comunes y crear sistemas de software más robustos y eficientes.
 
-*Para mas información ir a la rama de Patrones de Diseño*
 
-
-
-### Estilos Arquitectónicos
