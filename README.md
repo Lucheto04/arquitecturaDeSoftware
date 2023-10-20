@@ -1,143 +1,54 @@
-# Arquitectura de software
+# SOLID
 
 
 
-### Temas
+### ¿Qué es SOLID?
 
-[Que es la Arquitectura de Software](#¿que-es-la-arquitectura-de-software)
+SOLID es un acrónimo que representa cinco principios de diseño de software orientados a objetos. Estos principios son:
 
-[Atributos de Calidad](#atributos-de-calidad)
+* ***Principio de responsabilidad única (SRP):*** cada clase debe tener una única responsabilidad y esa responsabilidad debe estar completamente encapsulada por la clase.
+* ***Principio de abierto-cerrado (OCP):*** las clases deben ser abiertas para la extensión, pero cerradas para la modificación.
+* ***Principio de sustitución de Liskov (LSP):*** una instancia de una subclase debe poder ser sustituida por una instancia de su superclase sin alterar el comportamiento del programa.
+* ***Principio de segregación de interfaces (ISP):*** las interfaces deben ser tan pequeñas como sea posible, pero lo suficientemente grandes como para ser útiles.
+* ***Principio de inversión de dependencias (DIP):*** las dependencias deben depender de abstracciones, no de implementaciones concretas.
+  Estos principios no son reglas estrictas, sino pautas que se pueden seguir para crear un código más limpio, mantenible y escalable.
 
-[Decisiones de Diseño](#decisiones-de-diseño)
+SOLID no es un patrón de diseño ni un tipo de arquitectura de software. Se trata de un conjunto de principios que se pueden aplicar a cualquier tipo de código, independientemente del lenguaje de programación o de la arquitectura utilizada.
 
-[Patrones de Arquitectura](#patrones-de-arquitectura)
+### ¿Qué beneficios aporta SOLID?
 
-[Patrones de Diseño](#patrones-de-diseño)
+Los principios SOLID aportan los siguientes beneficios:
 
-[Estilos Arquitectónicos](#estilos-arquitectónicos)
+Código más limpio y legible: SOLID ayuda a organizar el código de una forma más lógica y coherente, lo que lo hace más fácil de entender y mantener.
+Código más mantenible: SOLID hace que el código sea más fácil de modificar y actualizar, ya que las dependencias están bien definidas y las clases están bien estructuradas.
+Código más escalable: SOLID ayuda a crear código que sea más fácil de ampliar y adaptar a nuevos requisitos.
+¿Cómo aplicar SOLID?
 
+Aplicar los principios SOLID requiere un esfuerzo consciente por parte del desarrollador. No es algo que se pueda hacer de forma automática. Sin embargo, hay algunas cosas que se pueden hacer para empezar a aplicar SOLID en el código:
 
+Revisar el código existente: Una buena manera de empezar es revisar el código existente para identificar áreas donde se podrían aplicar los principios SOLID.
+Escribir nuevo código: Al escribir nuevo código, intentar aplicar los principios SOLID desde el principio.
+Aprender de otros: Hay muchos recursos disponibles para aprender sobre SOLID. Leer libros, artículos y blogs sobre el tema puede ayudar a entender mejor los principios y cómo aplicarlos.
+Ejemplos de SOLID en C#
 
-### ¿Que es la Arquitectura de Software?
+Aquí hay algunos ejemplos de cómo aplicar los principios SOLID en NodeJs y React:
 
-La arquitectura de software es algo que a lo largo de los años aún no se le ha podido dar una definición exacta. Hay muchas opiniones diferentes respecto a lo que es la arquitectura de software, para una mejor explicacion vamos a investigar unas de las definiciones mas importantes. 
+* **Principio de responsabilidad única (SRP)**
+  * **En Node.js:** una función que se encarga de crear una conexión a una base de datos no debería también encargarse de realizar consultas a la base de datos.
+  * **En React:** un componente que se encarga de renderizar un formulario no debería también encargarse de validar los datos del formulario.
+* **Principio de abierto-cerrado (OCP)**
+  - **En Node.js:** una clase que representa un servicio de envío de correos electrónicos podría ser abierta para la extensión para agregar nuevos proveedores de correo electrónico, pero cerrada para la modificación para evitar romper el código existente.
+  - **En React:** un componente que representa una lista de productos podría ser abierto para la extensión para agregar nuevos tipos de productos, pero cerrado para la modificación para evitar romper el código existente.
+* **Principio de sustitución de Liskov (LSP)**
+  - **En Node.js:** una clase que representa una persona podría ser una subclase de una clase que representa un ser vivo. En este caso, una instancia de la clase persona debería poder ser sustituida por una instancia de la clase ser vivo sin alterar el comportamiento del programa.
+  - **En React:** un componente que representa un botón podría ser una subclase de un componente que representa un elemento de interfaz de usuario. En este caso, una instancia del componente botón debería poder ser sustituida por una instancia del componente elemento de interfaz de usuario sin alterar el comportamiento del programa.
+* **Principio de segregación de interfaces (ISP)**
+  - **En Node.js:** una interfaz que representa un servicio de almacenamiento podría ser segregada en varias interfaces más pequeñas, cada una de las cuales representa una característica específica del servicio.
+  - **En React:** una interfaz que representa un componente de interfaz de usuario podría ser segregada en varias interfaces más pequeñas, cada una de las cuales representa una característica específica del componente.
+* **Principio de inversión de dependencias (DIP)**
+  - **En Node.js:** una clase que representa un cliente de un servicio debería depender de una interfaz que representa el servicio. En este caso, la clase cliente no debería depender de una implementación concreta del servicio.
+  - **En React:** un componente que representa una lista de productos debería depender de una interfaz que representa un producto. En este caso, el componente no debería depender de una implementación concreta del producto.
 
-1. ***Ralph Johnson*** 
 
-   *La arquitectura de software de un sistema es el conjunto de estructuras necesarias para razonar acerca del sistema*
 
-2. ***Mary Shaw y David Garlan***
-
-   *La arquitectura de software abarca las estructuras necesarias para guiar el crecimiento del sistema, así como las propiedades emergentes de esos sistemas complejos.*
-
-3. **Roger S. Pressman**
-
-   *La arquitectura de software es el conjunto de decisiones de diseño importantes para organizar el software y promover los atributos de calidad deseados*
-
-De las siguientes definiciones podemos sacar los siguientes conceptos claves.
-
-***Estructura*** : Cómo organizar las partes del sistema y cómo conectarlas, en esto son los patrones de arquitectura los que te van a decir que componentes necesitas y se van a interconectar a esto.
-
-***Razonar :*** El objetivo es que la arquitectura de software facilite que el equipo tecnico pueda tener discusiones de alto nivel acerca del sistema
-
-***Decisiones de diseño :*** Son las decisiones que los arquitectos y desarrolladores toman durante el proceso de diseño para definir cómo se va a construir y estructurar el sistema de software, las decisiones de diseño son cruciales porque afectar directamente la calidad y el éxito del software.
-
-***Atributos de calidad :*** Estos permiten definir que es lo que mas allá de lo funcional que garantiza que el sistema funcione bien. Estos atributos son esenciales para evaluar y medir la calidad de un software y determinan su aceptabilidad en términos de rendimiento, fiabilidad, seguridad, usabilidad, mantenibilidad y otros aspectos importantes.
-
-
-
-### Atributos de Calidad
-
-Los atributos de calidad son caracteristícas que definen la calidad de un sistema de software, son muy importantes para la arquitectura de software porque ayudan a garantizar que los sistemas de software sean funcionales, eficientes y confiables.
-
-Estos son algunos ejemplos de lo que se considerarian atributos de calidad:
-
-- **Funcionalidad:** La capacidad del sistema para satisfacer las necesidades de los usuarios.
-- **Usabilidad:** La facilidad con la que los usuarios pueden utilizar el sistema.
-- **Interoperabilidad:** La capacidad del sistema para interactuar con otros sistemas.
-- **Accesibilidad:** La capacidad del sistema para ser utilizado por personas con discapacidades.
-- **Rendimiento:** La velocidad, el tiempo de respuesta y la capacidad de procesamiento del sistema.
-- **Seguridad:** La capacidad del sistema para proteger los datos y la privacidad de los usuarios.
-- **Disponibilidad:** La capacidad del sistema para estar disponible para los usuarios.
-- **Mantenibilidad:** La facilidad con la que el sistema puede ser modificado o actualizado.
-- **Escalabilidad:** La capacidad del sistema para adaptarse a un aumento de la demanda.
-- **Portabilidad:** La capacidad del sistema para ser trasladado a diferentes entornos.
-
-Los arquitectos de software deben considerar tanto las decisiones de diseño como los atributos de calidad al diseñar y desarrollar sistemas de software. Las decisiones de diseño deben tomarse de manera que se cumplan los atributos de calidad deseados como por ejemplo una decisión de diseño puede ser elegir una arquitectura en capas para mejorar la escalabilidad del sistema. En este caso, la decisión de diseño se refiere a la elección de una arquitectura específica, mientras que el atributo de calidad es la escalabilidad.
-
-
-
-### Decisiones de Diseño
-
-Las decisiones de diseño en la arquitectura de software son las elecciones que se toman para definir la estructura y organización de un sistema de software. Estas decisiones tienen un impacto significativo en el rendimiento, la escalabilidad, la seguridad y la mantenibilidad del sistema.
-
-Algunas de las decisiones de diseño más comunes son:
-
-* ***Arquitectura:***  La elección de una arquitectura de software específica, como una arquitectura de microservicios o una arquitectura en capas.
-
-* ***Tecnología:***  La elección de las tecnologías que se utilizarán para implementar el sistema, como el lenguaje de programación, el framework y la base de datos.
-
-* **Estructura:**  La división del sistema en componentes o subsistemas.
-
-* **Interacción:**  La forma en que los componentes o subsistemas se comunican entre sí.
-
-* **Despliegue:**  La forma en que el sistema se implementará en un entorno de producción.
-
-Las decisiones de diseño deben tomarse teniendo en cuenta los requisitos funcionales y no funcionales del sistema. Los requisitos funcionales definen lo que el sistema debe hacer, mientras que los requisitos no funcionales definen cómo el sistema debe funcionar.
-
-
-
-**Requisitos funcionales**
-
-Los requisitos funcionales definen lo que el sistema debe hacer. Se centran en las funciones y características del sistema que deben estar disponibles para los usuarios. Los requisitos funcionales suelen ser expresados en términos de verbos, como *permitir*,  *proporcionar*,  *calcular* o  *mostrar*.
-
-Ejemplos de algunos requisitos funcionales:
-
-* El sistema debe permitir a los usuarios crear cuentas.
-* El sistema debe proporcionar una lista de productos para la compra.
-* El sistema debe calcular el total de una compra.
-* El sistema debe mostrar un mensaje de error si un usuario intenta realizar una compra con un saldo insuficiente.
-
-
-
-**Requisitos no funcionales**
-
-Los requisitos no funcionales definen cómo el sistema debe funcionar. Se centran en las propiedades y características del sistema que no son visibles para los usuarios. Los requisitos no funcionales suelen ser expresados en términos de adjetivos, como *rápido*, *seguro*, *confiable* o *escalable*.
-
-Ejemplos de algunos requisitos no funcionales:
-
-* El sistema debe ser capaz de procesar 1000 transacciones por segundo.
-* El sistema debe cumplir con los requisitos de seguridad de la información.
-* El sistema debe estar disponible 24/7.
-* El sistema debe ser capaz de escalar para atender a un aumento de la demanda.
-
-Los requisitos no funcionales se pueden clasificar en diferentes categorías, según su naturaleza o propósito. Algunas de las categorías más comunes incluyen:
-
-* **Rendimiento:**  Los requisitos de rendimiento de centran en la velocidad, el tiempo de respuesta y la capacidad de procesamiento del sistema.
-* **Seguridad:**  Los requisitos de seguridad se centran en la protección de los datos y la privacidad de los usuarios.
-* **Disponibilidad:**  Los requisitos de disponibilidad se centran en la capacidad del sistema para estar disponible para los usuarios.
-* **Mantenibilidad:**  Los requisitos de mantenibilidad se centran en la facilidad con la que el sistema puede ser modificado o actualizado.
-* **Usabilidad:**  Los requisitos de usabilidad se centran en la facilidad con la que los usuarios puedan utilizar el sistema.
-* **Interoperabilidad:**  Los requisitos de interoperabilidad se centran en la capacidad del sistema para interactuar con otros sistemas.
-
-Es importante documentar los requisitos funcionales y no funcionales de un sistema de software. La documentación de los requisitos ayuda a garantizar que el sistema se desarrolle y mantenga de manera consistente con las necesidades y objetivos del proyecto.
-
-
-
-### Patrones de Arquitectura
-
-Los patrones de arquitectura de software son soluciones o estructuras que ayudan a definir la aplicación desde el nivel más grande. Hay muchos patrones de arquitectura diferentes, cada uno con sus correspondientes ventajas y desventajas.
-
-*Para mas información ir a la rama de Patrones de Arquitectura*
-
-
-
-### Patrones de Diseño
-
-Los patrones de diseño en la arquitectura de software son soluciones generales y reutilizables a problemas comunes de diseño de software. Se basan en la experiencia de los arquitectos de software y proporcionan una forma de evitar errores comunes y crear sistemas de software más robustos y eficientes.
-
-*Para mas información ir a la rama de Patrones de Diseño*
-
-
-
-### Estilos Arquitectónicos
+En conclusión, SOLID es un conjunto de principios de diseño de software que pueden ayudar a crear un código más limpio, mantenible y escalable. Los principios SOLID no son reglas estrictas, pero seguirlos puede ayudar a los desarrolladores a escribir código de mejor calidad.
